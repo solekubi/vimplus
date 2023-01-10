@@ -447,6 +447,9 @@ function copy_files()
 
     rm -rf ~/.vim/autoload
     ln -s ${PWD}/autoload ~/.vim
+
+    rm -rf ~/.vim/bundle
+    ln -s ${PWD}/bundle ~/.vim
 }
 
 # 安装mac平台字体
