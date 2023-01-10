@@ -219,6 +219,7 @@ function install_to_user_on_linux()
 
     cp -R $src_vim_path"autoload/" $desc_vim_path
     cp -R $src_vim_path"plugged/" $desc_vim_path
+    cp -R $src_vim_path"bundle/" $desc_vim_path
 
     chown -R $desc_username":"$desc_username $desc_vim_path
 
@@ -255,6 +256,9 @@ function install_to_user_on_linux()
 
     ln -s $desc_vimplus_path"autoload" $desc_vim_path
     chown -R $desc_username":"$desc_username $desc_vim_path"autoload"
+    
+    ln -s $desc_vimplus_path"bundle" $desc_vim_path
+    chown -R $desc_username":"$desc_username $desc_vim_path"bundle"
 
     # 安装字体
     mkdir -p $desc_home_path".local/share/fonts/"
